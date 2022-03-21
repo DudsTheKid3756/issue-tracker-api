@@ -527,3 +527,550 @@ Information: 3/21/2022 1:31:10 AM Executed DbCommand (1ms) [Parameters=[], Comma
 SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
 FROM "Issues" AS i
 Information: 3/21/2022 1:31:10 AM Got all issues
+Information: 3/21/2022 1:35:47 AM Request received for GetIssues
+Information: 3/21/2022 1:35:47 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 1:35:47 AM Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 1:35:47 AM Got all issues
+Information: 3/21/2022 1:35:59 AM Request received for GetIssues
+Information: 3/21/2022 1:35:59 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 1:35:59 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 1:35:59 AM Got all issues
+Information: 3/21/2022 1:43:24 AM Request received for GetIssues
+Information: 3/21/2022 1:43:24 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 1:43:24 AM Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 1:43:24 AM Got all issues
+Information: 3/21/2022 1:43:30 AM Request received for GetIssues
+Information: 3/21/2022 1:43:30 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 1:43:30 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 1:43:30 AM Got all issues
+Information: 3/21/2022 1:43:34 AM Request received for GetIssues
+Information: 3/21/2022 1:43:34 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 1:43:34 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 1:43:34 AM Got all issues
+Information: 3/21/2022 1:43:36 AM Request received for GetIssues
+Information: 3/21/2022 1:43:36 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 1:43:36 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 1:43:36 AM Got all issues
+Information: 3/21/2022 1:43:45 AM Request received for GetIssues
+Information: 3/21/2022 1:43:45 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 1:43:45 AM Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 1:43:45 AM Got all issues
+Information: 3/21/2022 1:43:54 AM Request received for GetIssues
+Information: 3/21/2022 1:43:54 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 1:43:54 AM Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 1:43:54 AM Got all issues
+Information: 3/21/2022 1:44:06 AM Request received for GetIssues
+Information: 3/21/2022 1:44:06 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 1:44:06 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 1:44:06 AM Got all issues
+Information: 3/21/2022 1:44:20 AM Request received for GetIssues
+Information: 3/21/2022 1:44:20 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 1:44:20 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 1:44:20 AM Got all issues
+Information: 3/21/2022 1:51:10 AM Request received for GetIssues
+Information: 3/21/2022 1:51:11 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 1:51:11 AM Executed DbCommand (77ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 1:51:11 AM Got all issues
+Information: 3/21/2022 1:51:49 AM Request received for DeleteIssue: 1
+Information: 3/21/2022 1:51:49 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 1:51:49 AM Executed DbCommand (20ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+WHERE i."Id" = @__p_0
+LIMIT 1
+Error: 3/21/2022 1:51:49 AM Issue with id 1 does not exist in database
+Information: 3/21/2022 1:51:59 AM Request received for AddIssue
+Information: 3/21/2022 1:51:59 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 1:51:59 AM Executed DbCommand (22ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Issues" ("Comment", "Created", "HasReminder", "IsCompleted", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+Information: 3/21/2022 1:51:59 AM New issue added
+Information: 3/21/2022 1:52:09 AM Request received for GetIssues
+Information: 3/21/2022 1:52:09 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 1:52:09 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 1:52:09 AM Got all issues
+Information: 3/21/2022 1:53:11 AM Request received for GetIssues
+Information: 3/21/2022 1:53:11 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 1:53:11 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 1:53:11 AM Got all issues
+Information: 3/21/2022 1:57:55 AM Request received for GetIssues
+Information: 3/21/2022 1:57:55 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 1:57:55 AM Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 1:57:55 AM Got all issues
+Information: 3/21/2022 1:59:10 AM Request received for GetIssues
+Information: 3/21/2022 1:59:10 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 1:59:10 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 1:59:10 AM Got all issues
+Information: 3/21/2022 1:59:25 AM Request received for GetIssues
+Information: 3/21/2022 1:59:25 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 1:59:25 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 1:59:25 AM Got all issues
+Information: 3/21/2022 2:08:57 AM Request received for GetIssues
+Information: 3/21/2022 2:08:57 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:08:57 AM Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:08:57 AM Got all issues
+Information: 3/21/2022 2:23:06 AM Request received for GetIssues
+Information: 3/21/2022 2:23:06 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:23:06 AM Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:23:06 AM Got all issues
+Information: 3/21/2022 2:23:13 AM Request received for GetIssues
+Information: 3/21/2022 2:23:13 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:23:13 AM Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:23:13 AM Got all issues
+Information: 3/21/2022 2:23:17 AM Request received for GetIssues
+Information: 3/21/2022 2:23:17 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:23:17 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:23:17 AM Got all issues
+Information: 3/21/2022 2:23:50 AM Request received for GetIssues
+Information: 3/21/2022 2:23:50 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:23:50 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:23:50 AM Got all issues
+Information: 3/21/2022 2:24:34 AM Request received for GetIssues
+Information: 3/21/2022 2:24:34 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:24:34 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:24:34 AM Got all issues
+Information: 3/21/2022 2:30:54 AM Request received for GetIssues
+Information: 3/21/2022 2:30:54 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:30:54 AM Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:30:54 AM Got all issues
+Information: 3/21/2022 2:31:19 AM Request received for GetIssues
+Information: 3/21/2022 2:31:19 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:31:19 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:31:19 AM Got all issues
+Information: 3/21/2022 2:31:21 AM Request received for GetIssues
+Information: 3/21/2022 2:31:21 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:31:21 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:31:21 AM Got all issues
+Information: 3/21/2022 2:31:43 AM Request received for GetIssues
+Information: 3/21/2022 2:31:43 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:31:43 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:31:43 AM Got all issues
+Information: 3/21/2022 2:31:49 AM Request received for GetIssues
+Information: 3/21/2022 2:31:49 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:31:49 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:31:49 AM Got all issues
+Information: 3/21/2022 2:32:18 AM Request received for GetIssues
+Information: 3/21/2022 2:32:18 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:32:18 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:32:18 AM Got all issues
+Information: 3/21/2022 2:32:31 AM Request received for GetIssues
+Information: 3/21/2022 2:32:31 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:32:31 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:32:31 AM Got all issues
+Information: 3/21/2022 2:32:32 AM Request received for GetIssues
+Information: 3/21/2022 2:32:32 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:32:32 AM Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:32:32 AM Got all issues
+Information: 3/21/2022 2:32:35 AM Request received for GetIssues
+Information: 3/21/2022 2:32:35 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:32:35 AM Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:32:35 AM Got all issues
+Information: 3/21/2022 2:32:39 AM Request received for GetIssues
+Information: 3/21/2022 2:32:39 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:32:39 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:32:39 AM Got all issues
+Information: 3/21/2022 2:33:21 AM Request received for GetIssues
+Information: 3/21/2022 2:33:21 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:33:21 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:33:21 AM Got all issues
+Information: 3/21/2022 2:33:29 AM Request received for GetIssues
+Information: 3/21/2022 2:33:29 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:33:29 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:33:29 AM Got all issues
+Information: 3/21/2022 2:33:32 AM Request received for GetIssues
+Information: 3/21/2022 2:33:32 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:33:32 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:33:32 AM Got all issues
+Information: 3/21/2022 2:33:46 AM Request received for GetIssues
+Information: 3/21/2022 2:33:46 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:33:46 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:33:46 AM Got all issues
+Information: 3/21/2022 2:33:57 AM Request received for GetIssues
+Information: 3/21/2022 2:33:57 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:33:57 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:33:57 AM Got all issues
+Information: 3/21/2022 2:34:12 AM Request received for GetIssues
+Information: 3/21/2022 2:34:12 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:34:12 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:34:12 AM Got all issues
+Information: 3/21/2022 2:34:15 AM Request received for GetIssues
+Information: 3/21/2022 2:34:15 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:34:15 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:34:15 AM Got all issues
+Information: 3/21/2022 2:35:23 AM Request received for GetIssues
+Information: 3/21/2022 2:35:23 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:35:23 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:35:23 AM Got all issues
+Information: 3/21/2022 2:35:24 AM Request received for GetIssues
+Information: 3/21/2022 2:35:24 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:35:24 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:35:24 AM Got all issues
+Information: 3/21/2022 2:35:32 AM Request received for GetIssues
+Information: 3/21/2022 2:35:32 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:35:32 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:35:32 AM Got all issues
+Information: 3/21/2022 2:35:35 AM Request received for GetIssues
+Information: 3/21/2022 2:35:35 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:35:35 AM Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:35:35 AM Got all issues
+Information: 3/21/2022 2:35:59 AM Request received for GetIssues
+Information: 3/21/2022 2:35:59 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:35:59 AM Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:35:59 AM Got all issues
+Information: 3/21/2022 2:36:34 AM Request received for GetIssues
+Information: 3/21/2022 2:36:34 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:36:34 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:36:34 AM Got all issues
+Information: 3/21/2022 2:37:07 AM Request received for GetIssues
+Information: 3/21/2022 2:37:07 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:37:07 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:37:07 AM Got all issues
+Information: 3/21/2022 2:41:06 AM Request received for GetIssues
+Information: 3/21/2022 2:41:06 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:41:06 AM Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:41:06 AM Got all issues
+Information: 3/21/2022 2:41:33 AM Request received for GetIssues
+Information: 3/21/2022 2:41:33 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:41:33 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:41:33 AM Got all issues
+Information: 3/21/2022 2:43:14 AM Request received for GetIssues
+Information: 3/21/2022 2:43:14 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:43:14 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:43:14 AM Got all issues
+Information: 3/21/2022 2:43:32 AM Request received for GetIssues
+Information: 3/21/2022 2:43:32 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:43:32 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:43:32 AM Got all issues
+Information: 3/21/2022 2:43:34 AM Request received for GetIssues
+Information: 3/21/2022 2:43:34 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:43:34 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:43:34 AM Got all issues
+Information: 3/21/2022 2:43:40 AM Request received for GetIssues
+Information: 3/21/2022 2:43:40 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:43:40 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:43:40 AM Got all issues
+Information: 3/21/2022 2:43:48 AM Request received for GetIssues
+Information: 3/21/2022 2:43:48 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:43:48 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:43:48 AM Got all issues
+Information: 3/21/2022 2:45:04 AM Request received for GetIssues
+Information: 3/21/2022 2:45:04 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:45:04 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:45:04 AM Got all issues
+Information: 3/21/2022 2:47:02 AM Request received for GetIssues
+Information: 3/21/2022 2:47:02 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:47:02 AM Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:47:02 AM Got all issues
+Information: 3/21/2022 2:47:03 AM Request received for GetIssues
+Information: 3/21/2022 2:47:03 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:47:03 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:47:03 AM Got all issues
+Information: 3/21/2022 2:47:08 AM Request received for GetIssues
+Information: 3/21/2022 2:47:08 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:47:08 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:47:08 AM Got all issues
+Information: 3/21/2022 2:47:14 AM Request received for GetIssues
+Information: 3/21/2022 2:47:14 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:47:14 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:47:14 AM Got all issues
+Information: 3/21/2022 2:47:39 AM Request received for GetIssues
+Information: 3/21/2022 2:47:39 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:47:39 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:47:39 AM Got all issues
+Information: 3/21/2022 2:47:47 AM Request received for GetIssues
+Information: 3/21/2022 2:47:47 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:47:47 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:47:47 AM Got all issues
+Information: 3/21/2022 2:48:15 AM Request received for GetIssues
+Information: 3/21/2022 2:48:15 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:48:15 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:48:15 AM Got all issues
+Information: 3/21/2022 2:49:43 AM Request received for GetIssues
+Information: 3/21/2022 2:49:43 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:49:43 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:49:43 AM Got all issues
+Information: 3/21/2022 2:53:01 AM Request received for GetIssues
+Information: 3/21/2022 2:53:01 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:53:01 AM Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:53:01 AM Got all issues
+Information: 3/21/2022 2:56:23 AM Request received for GetIssues
+Information: 3/21/2022 2:56:23 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:56:23 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:56:23 AM Got all issues
+Information: 3/21/2022 2:56:26 AM Request received for GetIssues
+Information: 3/21/2022 2:56:26 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:56:26 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:56:26 AM Got all issues
+Information: 3/21/2022 2:59:11 AM Request received for GetIssues
+Information: 3/21/2022 2:59:11 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 2:59:12 AM Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 2:59:12 AM Got all issues
+Information: 3/21/2022 3:00:42 AM Request received for GetIssues
+Information: 3/21/2022 3:00:42 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 3:00:42 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 3:00:42 AM Got all issues
+Information: 3/21/2022 3:08:27 AM Request received for GetIssues
+Information: 3/21/2022 3:08:27 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 3:08:27 AM Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 3:08:27 AM Got all issues
+Information: 3/21/2022 3:08:35 AM Request received for GetIssues
+Information: 3/21/2022 3:08:35 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 3:08:35 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 3:08:35 AM Got all issues
+Information: 3/21/2022 3:10:27 AM Request received for GetIssues
+Information: 3/21/2022 3:10:27 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 3:10:27 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 3:10:27 AM Got all issues
+Information: 3/21/2022 3:15:37 AM Request received for GetIssues
+Information: 3/21/2022 3:15:37 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 3:15:37 AM Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 3:15:37 AM Got all issues
+Information: 3/21/2022 3:16:53 AM Request received for GetIssues
+Information: 3/21/2022 3:16:53 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 3:16:53 AM Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 3:16:53 AM Got all issues
+Information: 3/21/2022 3:18:51 AM Request received for GetIssues
+Information: 3/21/2022 3:18:51 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 3:18:52 AM Executed DbCommand (73ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 3:18:52 AM Got all issues
+Information: 3/21/2022 3:19:55 AM Request received for GetIssues
+Information: 3/21/2022 3:19:55 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 3:19:56 AM Executed DbCommand (68ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT i."Id", i."Comment", i."Created", i."HasReminder", i."IsCompleted", i."Title"
+FROM "Issues" AS i
+Information: 3/21/2022 3:19:56 AM Got all issues
+Information: 3/21/2022 3:20:08 AM Request received for AddIssue
+Information: 3/21/2022 3:20:08 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Error: 3/21/2022 3:20:08 AM Failed executing DbCommand (10ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Issues" ("Comment", "Created", "HasReminder", "IsCompleted", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+Error: 3/21/2022 3:20:08 AM An exception occurred in the database while saving changes for context type 'IssueTracker.Data.IssueTrackerContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.InvalidCastException: Cannot write DateTime with Kind=Local to PostgreSQL type 'timestamp with time zone', only UTC is supported. Note that it's not possible to mix DateTimes with different Kinds in an array/range. See the Npgsql.EnableLegacyTimestampBehavior AppContext switch to enable legacy behavior.
+   at Npgsql.Internal.TypeHandlers.DateTimeHandlers.TimestampTzHandler.ValidateAndGetLength(DateTime value, NpgsqlParameter parameter)
+   at Npgsql.Internal.TypeHandlers.DateTimeHandlers.TimestampTzHandler.ValidateObjectAndGetLength(Object value, NpgsqlLengthCache& lengthCache, NpgsqlParameter parameter)
+   at Npgsql.NpgsqlParameter.ValidateAndGetLength()
+   at Npgsql.NpgsqlParameterCollection.ValidateAndBind(ConnectorTypeMapper typeMapper)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Information: 3/21/2022 3:21:02 AM Request received for AddIssue
+Information: 3/21/2022 3:21:03 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Error: 3/21/2022 3:21:03 AM Failed executing DbCommand (28ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Issues" ("Comment", "Created", "HasReminder", "IsCompleted", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+Error: 3/21/2022 3:21:03 AM An exception occurred in the database while saving changes for context type 'IssueTracker.Data.IssueTrackerContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.InvalidCastException: Cannot write DateTime with Kind=Local to PostgreSQL type 'timestamp with time zone', only UTC is supported. Note that it's not possible to mix DateTimes with different Kinds in an array/range. See the Npgsql.EnableLegacyTimestampBehavior AppContext switch to enable legacy behavior.
+   at Npgsql.Internal.TypeHandlers.DateTimeHandlers.TimestampTzHandler.ValidateAndGetLength(DateTime value, NpgsqlParameter parameter)
+   at Npgsql.Internal.TypeHandlers.DateTimeHandlers.TimestampTzHandler.ValidateObjectAndGetLength(Object value, NpgsqlLengthCache& lengthCache, NpgsqlParameter parameter)
+   at Npgsql.NpgsqlParameter.ValidateAndGetLength()
+   at Npgsql.NpgsqlParameterCollection.ValidateAndBind(ConnectorTypeMapper typeMapper)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Information: 3/21/2022 3:23:33 AM Request received for AddIssue
+Information: 3/21/2022 3:23:34 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 3:23:34 AM Executed DbCommand (85ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Issues" ("Comment", "Created", "HasReminder", "IsCompleted", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+Information: 3/21/2022 3:23:34 AM New issue added
+Information: 3/21/2022 3:32:17 AM Request received for AddIssue
+Information: 3/21/2022 3:32:18 AM Entity Framework Core 6.0.2 initialized 'IssueTrackerContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+Information: 3/21/2022 3:32:19 AM Executed DbCommand (87ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Issues" ("Comment", "Created", "HasReminder", "IsCompleted", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+Information: 3/21/2022 3:32:19 AM New issue added

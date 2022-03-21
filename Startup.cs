@@ -50,6 +50,8 @@ public class Startup
     {
         loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "Logs"));
         
+        AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+        
         app.UseSwagger();
         app.UseSwaggerUI(c =>
         {

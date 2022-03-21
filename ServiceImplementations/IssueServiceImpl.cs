@@ -40,7 +40,7 @@ public class IssueServiceImpl : IIssueService
 
     public async Task<Issue> AddIssue(Issue issue)
     {
-        issue.Created = DateTime.Now.ToUniversalTime();
+        issue.Created = DateTime.Now.ToLocalTime();
         var errors = Validation.GetErrors(issue);
         if (errors.Length != 0)
         {
@@ -63,7 +63,7 @@ public class IssueServiceImpl : IIssueService
             throw new NotFoundException(string.Format($"Issue{Constants.NotFound}", id));
         }
 
-        issue.Created = DateTime.Now.ToUniversalTime();
+        issue.Created = DateTime.Now.ToLocalTime();
         var errors = Validation.GetErrors(issue);
         if (errors.Length != 0)
         {
