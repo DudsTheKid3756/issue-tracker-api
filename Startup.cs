@@ -22,6 +22,11 @@ public class Startup
         services.AddDbContext<IssueTrackerContext>(options =>
             options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
         services.AddScoped<IIssueService, IssueServiceImpl>();
+        services.AddCors(options =>
+        {
+            options.AddDefaultPolicy(
+                builder => builder.AllowAnyOrigin().AllowAnyHeader());
+        });
         services.AddMvc(options => options.EnableEndpointRouting = false);
         services.AddControllers();
         services.AddSwaggerGen(c =>
@@ -55,6 +60,8 @@ public class Startup
         {
             app.UseDeveloperExceptionPage();
         }
+
+        app.UseCors();
 
         app.UseExceptionMiddleware();
 
