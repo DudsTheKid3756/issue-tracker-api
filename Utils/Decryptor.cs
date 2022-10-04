@@ -5,10 +5,9 @@ namespace IssueTracker.Utils;
 
 public class Decryptor
 {
-    [Obsolete("Obsolete")]
     public static string Decrypt(string connectionString)
     {
-        using var des = new DESCryptoServiceProvider();
+        using var des = Aes.Create();
         try
         {
             const string publicKey = "12345678";
