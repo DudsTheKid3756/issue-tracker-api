@@ -18,6 +18,7 @@ public class Startup
 
     private IConfiguration Configuration { get; }
 
+    [Obsolete("Obsolete")]
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddDbContext<IssueTrackerContext>(options =>
