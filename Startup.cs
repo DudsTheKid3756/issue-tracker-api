@@ -3,6 +3,7 @@ using IssueTracker.Exceptions;
 using IssueTracker.Logging;
 using IssueTracker.ServiceImplementations;
 using IssueTracker.Services;
+using IssueTracker.Utils;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -17,10 +18,11 @@ public class Startup
 
     private IConfiguration Configuration { get; }
 
+    [Obsolete("Obsolete")]
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddDbContext<IssueTrackerContext>(options =>
-            options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+            options.UseNpgsql(Decryptor.Decrypt(Configuration.GetConnectionString("DefaultConnection"))));
         services.AddScoped<IIssueService, IssueServiceImpl>();
         services.AddCors(options =>
         {

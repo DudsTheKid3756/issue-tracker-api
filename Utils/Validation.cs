@@ -12,7 +12,7 @@ public class Validation
         return "";
     }
 
-    private static string ValidateEntity(object o, List<string> nullFields)
+    private static string ValidateEntity(object o, ICollection<string> nullFields)
     {
         return o.GetType().GetProperties().Where(property => property.PropertyType.Name is "String")
             .Where(property => property.GetValue(o) is not null).Aggregate("",
