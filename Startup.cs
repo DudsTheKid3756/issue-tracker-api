@@ -27,7 +27,7 @@ public class Startup
         services.AddCors(options =>
         {
             options.AddDefaultPolicy(
-                builder => builder.AllowAnyOrigin().AllowAnyHeader());
+                builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
         });
         services.AddMvc(options => options.EnableEndpointRouting = false);
         services.AddControllers();
