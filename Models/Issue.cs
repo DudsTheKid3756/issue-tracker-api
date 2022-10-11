@@ -8,7 +8,7 @@ public record Issue
     
     public string? Comment { get; set; }
     
-    public DateTime? Created { get; set; }
+    public string? Created { get; set; }
     
     public bool? IsCompleted { get; set; } = false;
 

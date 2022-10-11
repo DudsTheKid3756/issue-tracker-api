@@ -40,7 +40,7 @@ public class IssueServiceImpl : IIssueService
 
     public async Task<Issue> AddIssue(Issue issue)
     {
-        issue.Created = DateTime.Now.ToLocalTime();
+        issue.Created = Constants.Placeholder;
         var errors = Validation.GetErrors(issue);
         if (errors.Length != 0)
         {
@@ -48,6 +48,7 @@ public class IssueServiceImpl : IIssueService
             throw new InvalidException(errors);
         }
 
+        issue.Created = DateTime.Now.ToLocalTime().ToString("G");
         var result = await _context.Issues.AddAsync(issue);
         await _context.SaveChangesAsync();
         _logger.LogInformation("New issue added");
@@ -63,7 +64,7 @@ public class IssueServiceImpl : IIssueService
             throw new NotFoundException(string.Format($"Issue{Constants.NotFound}", id));
         }
 
-        issue.Created = DateTime.Now.ToLocalTime();
+        issue.Created = Constants.Placeholder;
         var errors = Validation.GetErrors(issue);
         if (errors.Length != 0)
         {
@@ -74,7 +75,7 @@ public class IssueServiceImpl : IIssueService
         result.Id = id;
         result.Title = issue.Title;
         result.Comment = issue.Comment;
-        result.Created = issue.Created;
+        result.Created = DateTime.Now.ToLocalTime().ToString("G");
         result.IsCompleted = issue.IsCompleted;
         result.HasReminder = issue.HasReminder;
 

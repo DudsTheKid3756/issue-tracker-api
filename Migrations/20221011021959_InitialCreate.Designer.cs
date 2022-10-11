@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace IssueTracker.Migrations
 {
     [DbContext(typeof(IssueTrackerContext))]
-    [Migration("20221010170415_InitialCreate")]
+    [Migration("20221011021959_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,8 +35,8 @@ namespace IssueTracker.Migrations
                     b.Property<string>("Comment")
                         .HasColumnType("text");
 
-                    b.Property<DateTime?>("Created")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<string>("Created")
+                        .HasColumnType("text");
 
                     b.Property<bool?>("HasReminder")
                         .HasColumnType("boolean");

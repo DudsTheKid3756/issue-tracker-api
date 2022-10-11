@@ -33,8 +33,8 @@ namespace IssueTracker.Migrations
                     b.Property<string>("Comment")
                         .HasColumnType("text");
 
-                    b.Property<DateTime?>("Created")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<string>("Created")
+                        .HasColumnType("text");
 
                     b.Property<bool?>("HasReminder")
                         .HasColumnType("boolean");
