@@ -4,6 +4,9 @@ using IssueTracker.Models;
 using IssueTracker.Services;
 using IssueTracker.Utils;
 using Microsoft.EntityFrameworkCore;
+using Polly;
+using Polly.CircuitBreaker;
+using Polly.Retry;
 
 namespace IssueTracker.ServiceImplementations;
 
@@ -11,16 +14,21 @@ public class IssueServiceImpl : IIssueService
 {
     private readonly IssueTrackerContext _context;
     private readonly ILogger<IssueServiceImpl> _logger;
+    private readonly AsyncCircuitBreakerPolicy _circuitBreaker;
 
     public IssueServiceImpl(IssueTrackerContext context, ILogger<IssueServiceImpl> logger)
     {
         _context = context;
         _logger = logger;
+
+        _circuitBreaker = Policy
+            .Handle<UnavailableException>()
+            .AdvancedCircuitBreakerAsync(0.5, TimeSpan.FromSeconds(10), 10, TimeSpan.FromSeconds(15));
     }
 
     public async Task<List<Issue>> GetIssues()
     {
-        var result = await _context.Issues.ToListAsync();
+        var result = await _circuitBreaker.ExecuteAsync(() => _context.Issues.ToListAsync());
         _logger.LogInformation("Got all issues");
         return result;
     }

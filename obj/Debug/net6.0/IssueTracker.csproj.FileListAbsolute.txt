@@ -146,3 +146,13 @@ C:\Users\duds_the_kid_3756\Desktop\Code\issue-tracker-api\obj\Debug\net6.0\refin
 C:\Users\duds_the_kid_3756\Desktop\Code\issue-tracker-api\obj\Debug\net6.0\IssueTracker.pdb
 C:\Users\duds_the_kid_3756\Desktop\Code\issue-tracker-api\obj\Debug\net6.0\IssueTracker.genruntimeconfig.cache
 C:\Users\duds_the_kid_3756\Desktop\Code\issue-tracker-api\obj\Debug\net6.0\ref\IssueTracker.dll
+C:\Users\duds_the_kid_3756\Desktop\Code\issue-tracker-api\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\duds_the_kid_3756\Desktop\Code\issue-tracker-api\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\duds_the_kid_3756\Desktop\Code\issue-tracker-api\bin\Debug\net6.0\Microsoft.Extensions.Http.dll
+C:\Users\duds_the_kid_3756\Desktop\Code\issue-tracker-api\bin\Debug\net6.0\Microsoft.Extensions.Http.Polly.dll
+C:\Users\duds_the_kid_3756\Desktop\Code\issue-tracker-api\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\duds_the_kid_3756\Desktop\Code\issue-tracker-api\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\duds_the_kid_3756\Desktop\Code\issue-tracker-api\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\duds_the_kid_3756\Desktop\Code\issue-tracker-api\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\duds_the_kid_3756\Desktop\Code\issue-tracker-api\bin\Debug\net6.0\Polly.dll
+C:\Users\duds_the_kid_3756\Desktop\Code\issue-tracker-api\bin\Debug\net6.0\Polly.Extensions.Http.dll

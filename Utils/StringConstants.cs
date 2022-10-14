@@ -7,5 +7,5 @@ public static class Constants
     public const string Null = " field cannot be null. ";
     public const string Placeholder = "placeholder";
 
-    public const string Alphanumeric = @"^([\d\w-'_][\s]*)+\s*$";
+    public const string Alphanumeric = @"^([\d\w-'_,.][\s]*)+\s*$";
 }

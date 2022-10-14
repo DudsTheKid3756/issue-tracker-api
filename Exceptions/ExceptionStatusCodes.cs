@@ -7,7 +7,8 @@ public static class ExceptionStatusCodes
     private static readonly Dictionary<Type, HttpStatusCode> StatusCodes = new()
     {
         {typeof(InvalidException), HttpStatusCode.BadRequest},
-        {typeof(NotFoundException), HttpStatusCode.NotFound}
+        {typeof(NotFoundException), HttpStatusCode.NotFound},
+        {typeof(UnavailableException), HttpStatusCode.ServiceUnavailable}
     };
 
     public static HttpStatusCode GetExceptionStatusCode(Exception exception)
