@@ -8,7 +8,8 @@ public class FileLogger : ILogger
     {
         _filePath = path;
     }
-    public IDisposable BeginScope<TState>(TState state)
+
+    public IDisposable BeginScope<TState>(TState state) where TState : notnull
     {
         return null!;
     }

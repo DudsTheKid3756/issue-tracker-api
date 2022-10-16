@@ -6,7 +6,6 @@ using IssueTracker.Utils;
 using Microsoft.EntityFrameworkCore;
 using Polly;
 using Polly.CircuitBreaker;
-using Polly.Retry;
 
 namespace IssueTracker.ServiceImplementations;
 
@@ -83,7 +82,6 @@ public class IssueServiceImpl : IIssueService
         result.Id = id;
         result.Title = issue.Title;
         result.Comment = issue.Comment;
-        result.Created = DateTime.Now.ToLocalTime().ToString("G");
         result.IsCompleted = issue.IsCompleted;
         result.HasReminder = issue.HasReminder;
 
