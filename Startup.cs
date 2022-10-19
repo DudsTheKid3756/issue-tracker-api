@@ -24,6 +24,7 @@ public class Startup
         services.AddDbContext<IssueTrackerContext>(options =>
             options.UseNpgsql(Decryptor.Decrypt(Configuration.GetConnectionString("DefaultConnection"))));
         services.AddScoped<IIssueService, IssueServiceImpl>();
+        services.AddScoped<IReminderService, ReminderServiceImpl>();
         services.AddCors(options =>
         {
             options.AddDefaultPolicy(

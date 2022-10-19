@@ -13,4 +13,6 @@ public record Issue
     public bool? IsCompleted { get; set; } = false;
 
     public bool? HasReminder { get; set; } = false;
+    
+    public Reminder? Reminder { get; set; }
 }

@@ -49,6 +49,48 @@ namespace IssueTracker.Migrations
 
                     b.ToTable("Issues");
                 });
+
+            modelBuilder.Entity("IssueTracker.Models.Reminder", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Alert")
+                        .HasColumnType("text");
+
+                    b.Property<DateOnly?>("Date")
+                        .HasColumnType("date");
+
+                    b.Property<int>("IssueId")
+                        .HasColumnType("integer");
+
+                    b.Property<TimeOnly?>("Time")
+                        .HasColumnType("time without time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IssueId")
+                        .IsUnique();
+
+                    b.ToTable("Reminders");
+                });
+
+            modelBuilder.Entity("IssueTracker.Models.Reminder", b =>
+                {
+                    b.HasOne("IssueTracker.Models.Issue", null)
+                        .WithOne("Reminder")
+                        .HasForeignKey("IssueTracker.Models.Reminder", "IssueId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("IssueTracker.Models.Issue", b =>
+                {
+                    b.Navigation("Reminder");
+                });
 #pragma warning restore 612, 618
         }
     }
