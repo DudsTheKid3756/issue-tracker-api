@@ -24,7 +24,6 @@ public class Startup
         services.AddDbContext<IssueTrackerContext>(options =>
             options.UseNpgsql(Decryptor.Decrypt(Configuration.GetConnectionString("DefaultConnection"))));
         services.AddScoped<IIssueService, IssueServiceImpl>();
-        services.AddScoped<IReminderService, ReminderServiceImpl>();
         services.AddCors(options =>
         {
             options.AddDefaultPolicy(
@@ -48,23 +47,17 @@ public class Startup
             c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
         });
     }
-    
+
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
     {
         loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "Logs"));
-        
-        AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
-        
-        app.UseSwagger();
-        app.UseSwaggerUI(c =>
-        {
-            c.SwaggerEndpoint("/swagger/Issue Tracker v1/swagger.json", "Issue Tracker v1");
-        });
 
-        if (env.IsDevelopment())
-        {
-            app.UseDeveloperExceptionPage();
-        }
+        AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
+        app.UseSwagger();
+        app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/Issue Tracker v1/swagger.json", "Issue Tracker v1"); });
+
+        if (env.IsDevelopment()) app.UseDeveloperExceptionPage();
 
         app.UseCors();
 

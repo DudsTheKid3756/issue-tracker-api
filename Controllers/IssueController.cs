@@ -10,7 +10,7 @@ public class IssueController : ControllerBase
 {
     private readonly IIssueService _issueService;
     private readonly ILogger<IssueController> _logger;
-    
+
     public IssueController(IIssueService issueService, ILogger<IssueController> logger)
     {
         _issueService = issueService;

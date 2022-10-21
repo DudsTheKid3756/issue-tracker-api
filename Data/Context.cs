@@ -1,15 +1,17 @@
-using Microsoft.EntityFrameworkCore;
 using IssueTracker.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace IssueTracker.Data;
 
 public class IssueTrackerContext : DbContext
 {
+    public IssueTrackerContext(DbContextOptions<IssueTrackerContext> options)
+        : base(options)
+    {
+    }
+
     public DbSet<Issue> Issues { get; set; } = null!;
     public DbSet<Reminder> Reminders { get; set; } = null!;
-
-    public IssueTrackerContext(DbContextOptions<IssueTrackerContext> options)
-        : base(options) { }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

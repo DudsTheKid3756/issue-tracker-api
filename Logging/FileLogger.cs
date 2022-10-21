@@ -2,8 +2,9 @@ namespace IssueTracker.Logging;
 
 public class FileLogger : ILogger
 {
-    private readonly string _filePath;
     private static readonly object Lock = new();
+    private readonly string _filePath;
+
     public FileLogger(string path)
     {
         _filePath = path;
@@ -19,7 +20,8 @@ public class FileLogger : ILogger
         return logLevel == LogLevel.Trace;
     }
 
-    public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
+    public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception,
+        Func<TState, Exception?, string> formatter)
     {
         lock (Lock)
         {
@@ -27,7 +29,8 @@ public class FileLogger : ILogger
             var n = Environment.NewLine;
             var exc = "";
             if (exception != null) exc = exception.GetType() + ": " + exception.Message + n + exception.StackTrace + n;
-            File.AppendAllText(fullFilePath, logLevel + ": " + DateTime.Now + " " + formatter(state, exception!) + n + exc);
+            File.AppendAllText(fullFilePath,
+                logLevel + ": " + DateTime.Now + " " + formatter(state, exception!) + n + exc);
         }
     }
 }

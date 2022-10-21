@@ -17,12 +17,12 @@ public class ExceptionMiddleware
         }
         catch (Exception ex)
         {
-            httpContext.Response.StatusCode = (int) ExceptionStatusCodes.GetExceptionStatusCode(ex);
+            httpContext.Response.StatusCode = (int)ExceptionStatusCodes.GetExceptionStatusCode(ex);
             await httpContext.Response.WriteAsync(ex.Message);
         }
     }
-
 }
+
 public static class MiddlewareExtensions
 {
     public static void UseExceptionMiddleware(this IApplicationBuilder builder)

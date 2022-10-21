@@ -11,9 +11,9 @@ namespace IssueTracker.ServiceImplementations;
 
 public class IssueServiceImpl : IIssueService
 {
+    private readonly AsyncCircuitBreakerPolicy _circuitBreaker;
     private readonly IssueTrackerContext _context;
     private readonly ILogger<IssueServiceImpl> _logger;
-    private readonly AsyncCircuitBreakerPolicy _circuitBreaker;
 
     public IssueServiceImpl(IssueTrackerContext context, ILogger<IssueServiceImpl> logger)
     {
@@ -27,14 +27,14 @@ public class IssueServiceImpl : IIssueService
 
     public async Task<List<Issue>> GetIssues()
     {
-        var result = await _circuitBreaker.ExecuteAsync(() => _context.Issues.ToListAsync());
+        var result = await _circuitBreaker.ExecuteAsync(() => _context.Issues.Include(i => i.Reminder).ToListAsync());
         _logger.LogInformation("Got all issues");
         return result;
     }
 
     public async Task<Issue?> GetIssueById(int id)
     {
-        var result = await _context.Issues.FindAsync(id);
+        var result = await _context.Issues.Include(i => i.Reminder).FirstOrDefaultAsync(i => i.Id == id);
         if (result is null)
         {
             _logger.LogError("{}{}", "Issue", Constants.NotFound.Replace("{0}", id.ToString()));
@@ -49,6 +49,8 @@ public class IssueServiceImpl : IIssueService
     {
         issue.Created = Constants.Placeholder;
         var errors = Validation.GetErrors(issue);
+        var options = Constants.AlertOptions;
+        if (!options.Contains(issue.Reminder!.Alert!)) errors += ListFormatter.Formatter(options);
         if (errors.Length != 0)
         {
             _logger.LogError("{}", errors);
@@ -64,7 +66,7 @@ public class IssueServiceImpl : IIssueService
 
     public async Task<Issue?> UpdateIssue(Issue issue, int id)
     {
-        var result = await _context.Issues.FindAsync(id);
+        var result = await _context.Issues.Include(i => i.Reminder).FirstOrDefaultAsync(i => i.Id == id);
         if (result is null)
         {
             _logger.LogError("{}{}", "Issue", Constants.NotFound.Replace("{0}", id.ToString()));
@@ -73,6 +75,8 @@ public class IssueServiceImpl : IIssueService
 
         issue.Created = Constants.Placeholder;
         var errors = Validation.GetErrors(issue);
+        var options = Constants.AlertOptions;
+        if (!options.Contains(issue.Reminder!.Alert!)) errors += ListFormatter.Formatter(options);
         if (errors.Length != 0)
         {
             _logger.LogError("{}", errors);
