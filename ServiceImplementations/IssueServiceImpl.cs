@@ -82,14 +82,12 @@ public class IssueServiceImpl : IIssueService
         result.Id = id;
         result.Title = issue.Title;
         result.Comment = issue.Comment;
+        result.Created = issue.Created;
         result.IsCompleted = issue.IsCompleted;
         result.HasReminder = issue.HasReminder;
 
         await _context.SaveChangesAsync();
-        _logger.LogInformation(
-            "Issue with id {} updated at: {}. 'Created' field changed to updated time",
-            id, result.Created
-        );
+        _logger.LogInformation("Issue with id {} updated", id);
         return result;
     }
 
