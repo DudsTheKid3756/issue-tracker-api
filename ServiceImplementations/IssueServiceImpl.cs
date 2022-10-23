@@ -22,7 +22,12 @@ public class IssueServiceImpl : IIssueService
 
         _circuitBreaker = Policy
             .Handle<UnavailableException>()
-            .AdvancedCircuitBreakerAsync(0.5, TimeSpan.FromSeconds(10), 10, TimeSpan.FromSeconds(15));
+            .AdvancedCircuitBreakerAsync(
+                0.5, 
+                TimeSpan.FromSeconds(10), 
+                10, 
+                TimeSpan.FromSeconds(15)
+                );
     }
 
     public async Task<List<Issue>> GetIssues()
@@ -48,9 +53,23 @@ public class IssueServiceImpl : IIssueService
     public async Task<Issue> AddIssue(Issue issue)
     {
         issue.Created = Constants.Placeholder;
-        var errors = Validation.GetErrors(issue);
-        var options = Constants.AlertOptions;
-        if (!options.Contains(issue.Reminder!.Alert!)) errors += ListFormatter.Formatter(options);
+        var errors = "";
+        if (issue.HasReminder is true)
+        {
+            if (issue.Reminder is null)
+            {
+                errors += $"Reminder{Constants.Null}";
+                _logger.LogError("{}", errors);
+                throw new InvalidException(errors);
+            }
+            
+            var options = Constants.AlertOptions;
+            var formattedOptions = ListFormatter.Formatter(options);
+            if (!options.Contains(issue.Reminder!.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'";
+        }
+
+        errors += Validation.GetErrors(issue);
+        
         if (errors.Length != 0)
         {
             _logger.LogError("{}", errors);
@@ -74,9 +93,23 @@ public class IssueServiceImpl : IIssueService
         }
 
         issue.Created = Constants.Placeholder;
-        var errors = Validation.GetErrors(issue);
-        var options = Constants.AlertOptions;
-        if (!options.Contains(issue.Reminder!.Alert!)) errors += ListFormatter.Formatter(options);
+        var errors = "";
+        if (issue.HasReminder is true)
+        {
+            if (issue.Reminder is null)
+            {
+                errors += $"Reminder{Constants.Null}";
+                _logger.LogError("{}", errors);
+                throw new InvalidException(errors);
+            }
+            
+            var options = Constants.AlertOptions;
+            var formattedOptions = ListFormatter.Formatter(options);
+            if (!options.Contains(issue.Reminder!.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'";
+        }
+        
+        errors += Validation.GetErrors(issue);
+        
         if (errors.Length != 0)
         {
             _logger.LogError("{}", errors);
@@ -86,9 +119,14 @@ public class IssueServiceImpl : IIssueService
         result.Id = id;
         result.Title = issue.Title;
         result.Comment = issue.Comment;
-        result.Created = issue.Created;
+        result.Created = result.Created;
         result.IsCompleted = issue.IsCompleted;
         result.HasReminder = issue.HasReminder;
+
+        result.Reminder!.Date = issue.Reminder!.Date;
+        result.Reminder!.Time = issue.Reminder!.Time;
+        result.Reminder!.Alert = issue.Reminder!.Alert;
+        result.Reminder!.IssueId = id;
 
         await _context.SaveChangesAsync();
         _logger.LogInformation("Issue with id {} updated", id);

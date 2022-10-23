@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace IssueTracker.Models;
 
 public record Issue
@@ -13,6 +15,6 @@ public record Issue
     public bool? IsCompleted { get; set; } = false;
 
     public bool? HasReminder { get; set; } = false;
-
-    public Reminder? Reminder { get; set; }
+    
+    public Reminder? Reminder { get; set; } = null!;
 }

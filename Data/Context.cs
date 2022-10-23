@@ -11,11 +11,10 @@ public class IssueTrackerContext : DbContext
     }
 
     public DbSet<Issue> Issues { get; set; } = null!;
-    public DbSet<Reminder> Reminders { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.Entity<Issue>()
-            .HasOne(i => i.Reminder);
+            .HasOne(i => i.Reminder).WithOne();
     }
 }

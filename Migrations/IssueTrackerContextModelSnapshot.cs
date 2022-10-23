@@ -52,11 +52,11 @@ namespace IssueTracker.Migrations
 
             modelBuilder.Entity("IssueTracker.Models.Reminder", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
                     b.Property<string>("Alert")
                         .HasColumnType("text");
@@ -64,7 +64,7 @@ namespace IssueTracker.Migrations
                     b.Property<DateOnly?>("Date")
                         .HasColumnType("date");
 
-                    b.Property<int>("IssueId")
+                    b.Property<int?>("IssueId")
                         .HasColumnType("integer");
 
                     b.Property<TimeOnly?>("Time")
@@ -75,16 +75,14 @@ namespace IssueTracker.Migrations
                     b.HasIndex("IssueId")
                         .IsUnique();
 
-                    b.ToTable("Reminders");
+                    b.ToTable("Reminder");
                 });
 
             modelBuilder.Entity("IssueTracker.Models.Reminder", b =>
                 {
                     b.HasOne("IssueTracker.Models.Issue", null)
                         .WithOne("Reminder")
-                        .HasForeignKey("IssueTracker.Models.Reminder", "IssueId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("IssueTracker.Models.Reminder", "IssueId");
                 });
 
             modelBuilder.Entity("IssueTracker.Models.Issue", b =>

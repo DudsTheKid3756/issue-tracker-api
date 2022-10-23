@@ -28,7 +28,7 @@ namespace IssueTracker.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Reminders",
+                name: "Reminder",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
@@ -36,22 +36,21 @@ namespace IssueTracker.Migrations
                     Date = table.Column<DateOnly>(type: "date", nullable: true),
                     Time = table.Column<TimeOnly>(type: "time without time zone", nullable: true),
                     Alert = table.Column<string>(type: "text", nullable: true),
-                    IssueId = table.Column<int>(type: "integer", nullable: false)
+                    IssueId = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Reminders", x => x.Id);
+                    table.PrimaryKey("PK_Reminder", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Reminders_Issues_IssueId",
+                        name: "FK_Reminder_Issues_IssueId",
                         column: x => x.IssueId,
                         principalTable: "Issues",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Reminders_IssueId",
-                table: "Reminders",
+                name: "IX_Reminder_IssueId",
+                table: "Reminder",
                 column: "IssueId",
                 unique: true);
         }
@@ -59,7 +58,7 @@ namespace IssueTracker.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Reminders");
+                name: "Reminder");
 
             migrationBuilder.DropTable(
                 name: "Issues");
