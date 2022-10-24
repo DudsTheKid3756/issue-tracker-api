@@ -52,6 +52,7 @@ public class IssueServiceImpl : IIssueService
 
     public async Task<Issue> AddIssue(Issue issue)
     {
+        var reminder = issue.Reminder;
         issue.Created = Constants.Placeholder;
         var errors = "";
         if (issue.HasReminder is true)
@@ -67,7 +68,9 @@ public class IssueServiceImpl : IIssueService
             var formattedOptions = ListFormatter.Formatter(options);
             if (!options.Contains(issue.Reminder!.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'";
         }
-
+        
+        issue.Reminder = Constants.PlaceholderReminder;
+        
         errors += Validation.GetErrors(issue);
         
         if (errors.Length != 0)
@@ -76,6 +79,7 @@ public class IssueServiceImpl : IIssueService
             throw new InvalidException(errors);
         }
 
+        issue.Reminder = reminder;
         issue.Created = DateTime.Now.ToLocalTime().ToString("G");
         var result = await _context.Issues.AddAsync(issue);
         await _context.SaveChangesAsync();
@@ -107,6 +111,8 @@ public class IssueServiceImpl : IIssueService
             var formattedOptions = ListFormatter.Formatter(options);
             if (!options.Contains(issue.Reminder!.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'";
         }
+
+        issue.Reminder = Constants.PlaceholderReminder;
         
         errors += Validation.GetErrors(issue);
         
@@ -123,10 +129,15 @@ public class IssueServiceImpl : IIssueService
         result.IsCompleted = issue.IsCompleted;
         result.HasReminder = issue.HasReminder;
 
-        result.Reminder!.Date = issue.Reminder!.Date;
-        result.Reminder!.Time = issue.Reminder!.Time;
-        result.Reminder!.Alert = issue.Reminder!.Alert;
-        result.Reminder!.IssueId = id;
+        if (result.HasReminder is true)
+        {
+            result.Reminder!.Date = issue.Reminder!.Date;
+            result.Reminder!.Time = issue.Reminder!.Time;
+            result.Reminder!.Alert = issue.Reminder!.Alert;
+            result.Reminder!.IssueId = id;
+        }
+
+        result.Reminder = result.Reminder;
 
         await _context.SaveChangesAsync();
         _logger.LogInformation("Issue with id {} updated", id);

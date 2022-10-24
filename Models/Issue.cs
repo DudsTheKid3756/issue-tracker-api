@@ -16,5 +16,5 @@ public record Issue
 
     public bool? HasReminder { get; set; } = false;
     
-    public Reminder? Reminder { get; set; } = null!;
+    public Reminder? Reminder { get; set; }
 }
