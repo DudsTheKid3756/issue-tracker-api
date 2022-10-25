@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace IssueTracker.Migrations
 {
     [DbContext(typeof(IssueTrackerContext))]
-    [Migration("20221024012342_InitialCreate")]
+    [Migration("20221025012429_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -84,7 +84,8 @@ namespace IssueTracker.Migrations
                 {
                     b.HasOne("IssueTracker.Models.Issue", null)
                         .WithOne("Reminder")
-                        .HasForeignKey("IssueTracker.Models.Reminder", "IssueId");
+                        .HasForeignKey("IssueTracker.Models.Reminder", "IssueId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("IssueTracker.Models.Issue", b =>

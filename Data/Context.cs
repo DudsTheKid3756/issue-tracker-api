@@ -15,6 +15,8 @@ public class IssueTrackerContext : DbContext
     protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.Entity<Issue>()
-            .HasOne(i => i.Reminder).WithOne();
+            .HasOne(i => i.Reminder)
+            .WithOne()
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

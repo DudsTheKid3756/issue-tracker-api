@@ -82,7 +82,8 @@ namespace IssueTracker.Migrations
                 {
                     b.HasOne("IssueTracker.Models.Issue", null)
                         .WithOne("Reminder")
-                        .HasForeignKey("IssueTracker.Models.Reminder", "IssueId");
+                        .HasForeignKey("IssueTracker.Models.Reminder", "IssueId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("IssueTracker.Models.Issue", b =>

@@ -45,7 +45,8 @@ namespace IssueTracker.Migrations
                         name: "FK_Reminder_Issues_IssueId",
                         column: x => x.IssueId,
                         principalTable: "Issues",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
