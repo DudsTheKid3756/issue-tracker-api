@@ -1,6 +1,6 @@
 namespace IssueTracker.Utils;
 
-public class ListFormatter
+public static class ListFormatter
 {
     public static string Formatter(List<string> list)
     {
