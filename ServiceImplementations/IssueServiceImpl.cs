@@ -3,6 +3,7 @@ using IssueTracker.Exceptions;
 using IssueTracker.Models;
 using IssueTracker.Services;
 using IssueTracker.Utils;
+using IssueTracker.Utils.Formatters;
 using Microsoft.EntityFrameworkCore;
 using Polly;
 using Polly.CircuitBreaker;
@@ -57,16 +58,16 @@ public class IssueServiceImpl : IIssueService
         var errors = "";
         if (issue.HasReminder is true)
         {
-            if (issue.Reminder is null)
+            if (reminder is null)
             {
                 errors += $"Reminder{Constants.Null}";
                 _logger.LogError("{}", errors);
                 throw new InvalidException(errors);
             }
-            
+
             var options = Constants.AlertOptions;
             var formattedOptions = ListFormatter.Formatter(options);
-            if (!options.Contains(issue.Reminder!.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'";
+            if (!options.Contains(reminder.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'. ";
         }
         
         issue.Reminder = Constants.PlaceholderReminder;

@@ -2,7 +2,7 @@ using System.Text.RegularExpressions;
 
 namespace IssueTracker.Utils;
 
-public class Validation
+public static class Validation
 {
     private static string ValidateField(string input, string field, ICollection<string> nullFields)
     {

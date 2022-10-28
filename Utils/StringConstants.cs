@@ -8,6 +8,7 @@ public static class Constants
     public const string Invalid = " field is invalid. ";
     public const string Null = " field cannot be null. ";
     public const string Placeholder = "placeholder";
+    public const string TimeFormat = "HH:mm";
     public static readonly Reminder PlaceholderReminder = new()
     {
         Id = -1,

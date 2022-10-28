@@ -3,7 +3,7 @@ using System.Text;
 
 namespace IssueTracker.Utils;
 
-public class Decryptor
+public static class Decrypter
 {
     [Obsolete("Obsolete")]
     public static string Decrypt(string connectionString)

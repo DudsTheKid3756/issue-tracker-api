@@ -1,4 +1,4 @@
-namespace IssueTracker.Utils;
+namespace IssueTracker.Utils.Formatters;
 
 public static class ListFormatter
 {

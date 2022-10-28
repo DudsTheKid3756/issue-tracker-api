@@ -22,7 +22,7 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddDbContext<IssueTrackerContext>(options =>
-            options.UseNpgsql(Decryptor.Decrypt(Configuration.GetConnectionString("DefaultConnection"))));
+            options.UseNpgsql(Decrypter.Decrypt(Configuration.GetConnectionString("DefaultConnection"))));
         services.AddScoped<IIssueService, IssueServiceImpl>();
         services.AddCors(options =>
         {
