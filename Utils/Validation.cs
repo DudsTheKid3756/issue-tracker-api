@@ -29,4 +29,11 @@ public static class Validation
         var nullErrors = string.Join(", ", nullFields.Select(field => field + Constants.Null));
         return ValidateEntity(o, nullFields) + nullErrors;
     }
+
+    public static string CheckHexCode(string hexCode)
+    {
+        var match = Regex.Match($"#{hexCode}", Constants.HexCode);
+        if (!match.Success | hexCode.StartsWith(' ')) return "Color is not a valid hex code.";
+        return "";
+    }
 }

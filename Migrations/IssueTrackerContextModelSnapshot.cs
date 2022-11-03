@@ -30,6 +30,9 @@ namespace IssueTracker.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Color")
+                        .HasColumnType("text");
+
                     b.Property<string>("Comment")
                         .HasColumnType("text");
 

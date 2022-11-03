@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace IssueTracker.Migrations
 {
     [DbContext(typeof(IssueTrackerContext))]
-    [Migration("20221028020448_InitialCreate")]
+    [Migration("20221103031211_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,6 +31,9 @@ namespace IssueTracker.Migrations
                         .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Color")
+                        .HasColumnType("text");
 
                     b.Property<string>("Comment")
                         .HasColumnType("text");

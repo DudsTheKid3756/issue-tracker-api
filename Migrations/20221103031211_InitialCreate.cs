@@ -19,6 +19,7 @@ namespace IssueTracker.Migrations
                     Title = table.Column<string>(type: "text", nullable: true),
                     Comment = table.Column<string>(type: "text", nullable: true),
                     Created = table.Column<string>(type: "text", nullable: true),
+                    Color = table.Column<string>(type: "text", nullable: true),
                     IsCompleted = table.Column<bool>(type: "boolean", nullable: true),
                     HasReminder = table.Column<bool>(type: "boolean", nullable: true)
                 },

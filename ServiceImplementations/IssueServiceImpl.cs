@@ -73,6 +73,7 @@ public class IssueServiceImpl : IIssueService
         issue.Reminder = Constants.PlaceholderReminder;
         
         errors += Validation.GetErrors(issue);
+        errors += Validation.CheckHexCode(issue.Color!);
         
         if (errors.Length != 0)
         {
@@ -82,6 +83,7 @@ public class IssueServiceImpl : IIssueService
 
         issue.Reminder = reminder;
         issue.Created = DateTime.Now.ToLocalTime().ToString("G");
+        issue.Color = $"#{issue.Color!}";
         var result = await _context.Issues.AddAsync(issue);
         await _context.SaveChangesAsync();
         _logger.LogInformation("New issue added");
