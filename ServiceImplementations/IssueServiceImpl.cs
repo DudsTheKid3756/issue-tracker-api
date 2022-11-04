@@ -71,8 +71,11 @@ public class IssueServiceImpl : IIssueService
         }
         
         issue.Reminder = Constants.PlaceholderReminder;
+        issue.Color = issue.Color![1..];
         
         errors += Validation.GetErrors(issue);
+        
+        issue.Color = $"#{issue.Color!}";
         errors += Validation.CheckHexCode(issue.Color!);
         
         if (errors.Length != 0)
@@ -83,7 +86,6 @@ public class IssueServiceImpl : IIssueService
 
         issue.Reminder = reminder;
         issue.Created = DateTime.Now.ToLocalTime().ToString("G");
-        issue.Color = $"#{issue.Color!}";
         var result = await _context.Issues.AddAsync(issue);
         await _context.SaveChangesAsync();
         _logger.LogInformation("New issue added");
@@ -92,6 +94,7 @@ public class IssueServiceImpl : IIssueService
 
     public async Task<Issue?> UpdateIssue(Issue issue, int id)
     {
+        var reminder = issue.Reminder;
         var result = await _context.Issues.Include(i => i.Reminder).FirstOrDefaultAsync(i => i.Id == id);
         if (result is null)
         {
@@ -103,7 +106,7 @@ public class IssueServiceImpl : IIssueService
         var errors = "";
         if (issue.HasReminder is true)
         {
-            if (issue.Reminder is null)
+            if (reminder is null)
             {
                 errors += $"Reminder{Constants.Null}";
                 _logger.LogError("{}", errors);
@@ -112,12 +115,16 @@ public class IssueServiceImpl : IIssueService
             
             var options = Constants.AlertOptions;
             var formattedOptions = ListFormatter.Formatter(options);
-            if (!options.Contains(issue.Reminder!.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'";
+            if (!options.Contains(reminder.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'";
         }
 
         issue.Reminder = Constants.PlaceholderReminder;
+        issue.Color = issue.Color![1..];
         
         errors += Validation.GetErrors(issue);
+
+        issue.Color = $"#{issue.Color!}";
+        errors += Validation.CheckHexCode(issue.Color);
         
         if (errors.Length != 0)
         {
@@ -128,6 +135,7 @@ public class IssueServiceImpl : IIssueService
         result.Id = id;
         result.Title = issue.Title;
         result.Comment = issue.Comment;
+        result.Color = issue.Color;
         result.Created = result.Created;
         result.IsCompleted = issue.IsCompleted;
         result.HasReminder = issue.HasReminder;
@@ -138,9 +146,9 @@ public class IssueServiceImpl : IIssueService
             result.Reminder!.Time = issue.Reminder!.Time;
             result.Reminder!.Alert = issue.Reminder!.Alert;
             result.Reminder!.IssueId = id;
+            result.Reminder = reminder;
         }
 
-        result.Reminder = result.Reminder;
 
         await _context.SaveChangesAsync();
         _logger.LogInformation("Issue with id {} updated", id);

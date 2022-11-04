@@ -1,5 +1,3 @@
-using System.Diagnostics;
-
 namespace IssueTracker.Models;
 
 public record Issue
@@ -12,7 +10,7 @@ public record Issue
 
     public string? Created { get; set; }
 
-    public string? Color { get; set; } = "000000";
+    public string? Color { get; set; } = "#000000";
 
     public bool? IsCompleted { get; set; } = false;
 
