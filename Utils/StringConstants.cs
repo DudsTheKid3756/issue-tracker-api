@@ -20,5 +20,5 @@ public static class Constants
 
     public const string Alphanumeric = @"^([\d\w-'_,.][\s]*)+\s*$";
     public const string HexCode = @"^#(?:(?:[\da-f]{3}){1,2}|(?:[\da-f]{4}){1,2})$";
-    public static readonly List<string> AlertOptions = new() { "No alert", "Half hour", "1 hour", "1 day", "2 days" };
+    public static readonly List<string> AlertOptions = new() { "No alert", "On time", "Half hour", "1 hour", "1 day", "2 days" };
 }
