@@ -24,11 +24,11 @@ public class IssueServiceImpl : IIssueService
         _circuitBreaker = Policy
             .Handle<UnavailableException>()
             .AdvancedCircuitBreakerAsync(
-                0.5, 
-                TimeSpan.FromSeconds(10), 
-                10, 
+                0.5,
+                TimeSpan.FromSeconds(10),
+                10,
                 TimeSpan.FromSeconds(15)
-                );
+            );
     }
 
     public async Task<List<Issue>> GetIssues()
@@ -69,15 +69,15 @@ public class IssueServiceImpl : IIssueService
             var formattedOptions = ListFormatter.Formatter(options);
             if (!options.Contains(reminder.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'. ";
         }
-        
+
         issue.Reminder = Constants.PlaceholderReminder;
         issue.Color = issue.Color![1..];
-        
+
         errors += Validation.GetErrors(issue);
-        
+
         issue.Color = $"#{issue.Color!}";
         errors += Validation.CheckHexCode(issue.Color!);
-        
+
         if (errors.Length != 0)
         {
             _logger.LogError("{}", errors);
@@ -112,7 +112,7 @@ public class IssueServiceImpl : IIssueService
                 _logger.LogError("{}", errors);
                 throw new InvalidException(errors);
             }
-            
+
             var options = Constants.AlertOptions;
             var formattedOptions = ListFormatter.Formatter(options);
             if (!options.Contains(reminder.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'";
@@ -120,12 +120,12 @@ public class IssueServiceImpl : IIssueService
 
         issue.Reminder = Constants.PlaceholderReminder;
         issue.Color = issue.Color![1..];
-        
+
         errors += Validation.GetErrors(issue);
 
         issue.Color = $"#{issue.Color!}";
         errors += Validation.CheckHexCode(issue.Color);
-        
+
         if (errors.Length != 0)
         {
             _logger.LogError("{}", errors);
@@ -140,15 +140,7 @@ public class IssueServiceImpl : IIssueService
         result.IsCompleted = issue.IsCompleted;
         result.HasReminder = issue.HasReminder;
 
-        if (result.HasReminder is true)
-        {
-            result.Reminder!.Date = issue.Reminder!.Date;
-            result.Reminder!.Time = issue.Reminder!.Time;
-            result.Reminder!.Alert = issue.Reminder!.Alert;
-            result.Reminder!.IssueId = id;
-            result.Reminder = reminder;
-        }
-
+        result.Reminder = result.HasReminder is true ? reminder : null;
 
         await _context.SaveChangesAsync();
         _logger.LogInformation("Issue with id {} updated", id);
