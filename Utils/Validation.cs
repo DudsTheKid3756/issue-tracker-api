@@ -33,7 +33,7 @@ public static class Validation
     public static string CheckHexCode(string hexCode)
     {
         var match = Regex.Match(hexCode, Constants.HexCode);
-        if (!match.Success | hexCode.StartsWith(' ')) return "Color is not a valid hex code.";
+        if (!match.Success | hexCode.StartsWith(' ')) return "Color is not a valid hex code. ";
         return "";
     }
 }
