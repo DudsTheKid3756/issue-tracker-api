@@ -58,12 +58,15 @@ public class IssueServiceImpl : IIssueService
         var errors = "";
         if (issue.HasReminder is true)
         {
-            if (reminder is null) errors += $"Reminder{Constants.Null}";
-            else {
-                var options = Constants.AlertOptions;
-                var formattedOptions = ListFormatter.Formatter(options);
-                if (!options.Contains(reminder.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'. ";
+            if (reminder is null)
+            {
+                errors += $"Reminder{Constants.Null}";
+                _logger.LogError("{}", errors);
+                throw new InvalidException(errors);
             }
+            var options = Constants.AlertOptions;
+            var formattedOptions = ListFormatter.Formatter(options);
+            if (!options.Contains(reminder.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'. ";
         }
 
         issue.Reminder = Constants.PlaceholderReminder;
@@ -100,14 +103,19 @@ public class IssueServiceImpl : IIssueService
 
         issue.Created = Constants.Placeholder;
         var errors = "";
+        // TODO: fix this so it matches java api implementation
         if (issue.HasReminder is true)
         {
-            if (reminder is null) errors += $"Reminder{Constants.Null}";
-            else {
-                var options = Constants.AlertOptions;
-                var formattedOptions = ListFormatter.Formatter(options);
-                if (!options.Contains(reminder.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'";
+            if (reminder is null)
+            {
+                errors += $"Reminder{Constants.Null}";
+                _logger.LogError("{}", errors);
+                throw new InvalidException(errors);
             }
+            var options = Constants.AlertOptions;
+            var formattedOptions = ListFormatter.Formatter(options);
+            if (!options.Contains(reminder.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'";
+            
         }
 
         issue.Reminder = Constants.PlaceholderReminder;
