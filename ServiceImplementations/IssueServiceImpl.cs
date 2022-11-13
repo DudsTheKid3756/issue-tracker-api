@@ -56,6 +56,8 @@ public class IssueServiceImpl : IIssueService
         var reminder = issue.Reminder;
         issue.Created = Constants.Placeholder;
         var errors = "";
+        var message = "";
+        
         if (issue.HasReminder is true)
         {
             if (reminder is null)
@@ -66,7 +68,13 @@ public class IssueServiceImpl : IIssueService
             }
             var options = Constants.AlertOptions;
             var formattedOptions = ListFormatter.Formatter(options);
-            if (!options.Contains(reminder.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'. ";
+            if (!options.Contains(reminder!.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'. ";
+        }
+        else
+        {
+            reminder = null;
+            message =
+                "Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder";
         }
 
         issue.Reminder = Constants.PlaceholderReminder;
@@ -87,7 +95,7 @@ public class IssueServiceImpl : IIssueService
         issue.Created = DateTime.Now.ToLocalTime().ToString("G");
         var result = await _context.Issues.AddAsync(issue);
         await _context.SaveChangesAsync();
-        _logger.LogInformation("New issue added");
+        _logger.LogInformation("{}", message.Equals("") ? "New issue added" : message);
         return result.Entity;
     }
 
@@ -103,7 +111,7 @@ public class IssueServiceImpl : IIssueService
 
         issue.Created = Constants.Placeholder;
         var errors = "";
-        // TODO: fix this so it matches java api implementation
+        var message = "";
         if (issue.HasReminder is true)
         {
             if (reminder is null)
@@ -115,8 +123,8 @@ public class IssueServiceImpl : IIssueService
             var options = Constants.AlertOptions;
             var formattedOptions = ListFormatter.Formatter(options);
             if (!options.Contains(reminder.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'";
-            
         }
+        else message = "'hasReminder' field was false. Reminder was set to null";
 
         issue.Reminder = Constants.PlaceholderReminder;
         issue.Color = issue.Color![1..];
@@ -143,7 +151,7 @@ public class IssueServiceImpl : IIssueService
         result.Reminder = result.HasReminder is true ? reminder : null;
 
         await _context.SaveChangesAsync();
-        _logger.LogInformation("Issue with id {} updated", id);
+        _logger.LogInformation("Issue with id {} updated. {}", id, message);
         return result;
     }
 
