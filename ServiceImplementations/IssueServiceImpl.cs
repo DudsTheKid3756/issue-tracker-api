@@ -68,7 +68,7 @@ public class IssueServiceImpl : IIssueService
             }
             var options = Constants.AlertOptions;
             var formattedOptions = ListFormatter.Formatter(options);
-            if (!options.Contains(reminder!.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'. ";
+            if (!options.Contains(reminder.Alert!)) errors += $"Alert{Constants.Invalid}Try '{formattedOptions}'. ";
         }
         else
         {
