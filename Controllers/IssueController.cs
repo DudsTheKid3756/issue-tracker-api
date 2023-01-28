@@ -1,11 +1,14 @@
 using IssueTracker.Models;
 using IssueTracker.Services;
+using IssueTracker.Utils;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IssueTracker.Controllers;
 
+[Authorize]
+[Route($"{Constants.BasePath}/[controller]")]
 [ApiController]
-[Route("[controller]")]
 public class IssueController : ControllerBase
 {
     private readonly IIssueService _issueService;
@@ -16,7 +19,7 @@ public class IssueController : ControllerBase
         _issueService = issueService;
         _logger = logger;
     }
-
+    
     [HttpGet]
     public async Task<ActionResult<List<Issue>>> GetIssues()
     {
