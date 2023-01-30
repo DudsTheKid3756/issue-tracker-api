@@ -20,3 +20,11 @@ public class IssueTrackerContext : DbContext
             .OnDelete(DeleteBehavior.Cascade);
     }
 }
+
+// dotnet-ef database update 0
+// && dotnet-ef migrations remove --context AuthContext
+// && dotnet-ef migrations remove --context IssueTrackerContext
+// && dotnet-ef migrations add InitialCreate --context IssueTrackerContext
+// && dotnet-ef migrations add InitialCreate --context AuthContext
+// && dotnet-ef database update --context IssueTrackerContext
+// && dotnet-ef database update --context AuthContext
