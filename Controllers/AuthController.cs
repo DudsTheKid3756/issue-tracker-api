@@ -54,39 +54,8 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost]
-    [Route("register")]
+    [Route("signup")]
     public async Task<IActionResult> Signup([FromBody] SignUpModel model)
-    {
-        var userExists = await _userManager.FindByNameAsync(model.Username);
-        if (userExists != null)
-            return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "User already exists!" });
-
-        IdentityUser user = new()
-        {
-            Email = model.Email,
-            SecurityStamp = Guid.NewGuid().ToString(),
-            UserName = model.Username
-        };
-        var result = await _userManager.CreateAsync(user, model.Password);
-        return !result.Succeeded 
-            ? StatusCode(
-                StatusCodes.Status500InternalServerError, 
-                new Response
-                {
-                    Status = "Error", 
-                    Message = "User creation failed! Please check user details and try again."
-                }) 
-            : Ok(
-                new Response
-                {
-                    Status = "Success", 
-                    Message = "User created successfully!"
-                });
-    }
-    
-    [HttpPost]
-    [Route("signup-admin")]
-    public async Task<IActionResult> AdminSignup([FromBody] SignUpModel model)
     {
         var userExists = await _userManager.FindByNameAsync(model.Username);
         if (userExists is not null)
@@ -104,19 +73,25 @@ public class AuthController : ControllerBase
         if (!result.Succeeded)
             return StatusCode(StatusCodes.Status500InternalServerError,
                 new Response { Status = "Error", Message = "User creation failed! Please check user details and try again." });
-        
-        if (!await _roleManager.RoleExistsAsync(UserRoles.RoleAdmin))
+
+        var modelRole = model.Role?.ToLower();
+
+        if (modelRole is not null && modelRole.Equals(UserRoles.RoleAdmin))
         {
-            await _roleManager.CreateAsync(new IdentityRole(UserRoles.RoleAdmin));
+            if (!await _roleManager.RoleExistsAsync(UserRoles.RoleAdmin))
+                await _roleManager.CreateAsync(new IdentityRole(UserRoles.RoleAdmin));
+
+            if (await _roleManager.RoleExistsAsync(UserRoles.RoleAdmin))
+                await _userManager.AddToRoleAsync(user, UserRoles.RoleAdmin);
         }
         else
         {
-            await _userManager.AddToRoleAsync(user, UserRoles.RoleAdmin);
-            await _userManager.AddToRoleAsync(user, UserRoles.RoleUser);
+            if (!await _roleManager.RoleExistsAsync(UserRoles.RoleUser))
+                await _roleManager.CreateAsync(new IdentityRole(UserRoles.RoleUser));
+            
+            if (await _roleManager.RoleExistsAsync(UserRoles.RoleUser))
+                await _userManager.AddToRoleAsync(user, UserRoles.RoleUser);
         }
-        
-        if (!await _roleManager.RoleExistsAsync(UserRoles.RoleUser))
-            await _roleManager.CreateAsync(new IdentityRole(UserRoles.RoleUser));
 
         return Ok(new Response { Status = "Success", Message = "User created successfully!" });
     }

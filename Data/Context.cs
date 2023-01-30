@@ -21,10 +21,4 @@ public class IssueTrackerContext : DbContext
     }
 }
 
-// dotnet-ef database update 0
-// && dotnet-ef migrations remove --context AuthContext
-// && dotnet-ef migrations remove --context IssueTrackerContext
-// && dotnet-ef migrations add InitialCreate --context IssueTrackerContext
-// && dotnet-ef migrations add InitialCreate --context AuthContext
-// && dotnet-ef database update --context IssueTrackerContext
-// && dotnet-ef database update --context AuthContext
+// dotnet-ef database drop --context IssueTrackerContext && dotnet-ef migrations remove --context AuthContext && dotnet-ef migrations remove --context IssueTrackerContext && dotnet-ef migrations add InitialCreate --context IssueTrackerContext && dotnet-ef migrations add InitialCreate --context AuthContext && dotnet-ef database update --context IssueTrackerContext && dotnet-ef database update --context AuthContext
