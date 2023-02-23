@@ -109,14 +109,8 @@ public class AuthController : ControllerBase
         if (user is null) throw new NotFoundException(
             "Error: User with username '" + resetModel.Username + "' not found.");
 
-        var errors = "";
-        if (!await _userManager.CheckPasswordAsync(user, resetModel.CurrPassword))
-            errors += "Current password incorrect. ";
-
         if (!resetModel.NewPassword!.Equals(resetModel.RepeatPassword))
-            errors += "Passwords don't match. ";
-
-        if (!errors.Equals("")) throw new InvalidException(errors.TrimEnd());
+            throw new InvalidException("Passwords don't match. ");
 
         var token = await _userManager.GeneratePasswordResetTokenAsync(user);
         await _userManager.ResetPasswordAsync(user, token, resetModel.NewPassword);
