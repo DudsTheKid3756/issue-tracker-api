@@ -1,6 +1,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using IssueTracker.Exceptions;
 using IssueTracker.Models;
 using IssueTracker.Utils;
 using Microsoft.AspNetCore.Identity;
@@ -93,7 +94,38 @@ public class AuthController : ControllerBase
                 await _userManager.AddToRoleAsync(user, UserRoles.RoleUser);
         }
 
-        return Ok(new Response { Status = "Success", Message = "User created successfully!" });
+        return Ok(new Response
+        {
+            Status = "Success", 
+            Message = "User created successfully!"
+        });
+    }
+
+    [HttpPut]
+    [Route("reset-pass")]
+    public async Task<ActionResult> ResetPassword([FromBody] PassResetModel resetModel)
+    {
+        var user = await _userManager.FindByNameAsync(resetModel.Username);
+        if (user is null) throw new NotFoundException(
+            "Error: User with username '" + resetModel.Username + "' not found.");
+
+        var errors = "";
+        if (!await _userManager.CheckPasswordAsync(user, resetModel.CurrPassword))
+            errors += "Current password incorrect. ";
+
+        if (!resetModel.NewPassword!.Equals(resetModel.RepeatPassword))
+            errors += "Passwords don't match. ";
+
+        if (!errors.Equals("")) throw new InvalidException(errors.TrimEnd());
+
+        var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+        await _userManager.ResetPasswordAsync(user, token, resetModel.NewPassword);
+
+        return Ok(new Response
+        {
+            Status = "Success", 
+            Message = "Password for user '" + user.UserName + "' updated!"
+        });
     }
 
     private JwtSecurityToken GetToken(IEnumerable<Claim> authClaims)
