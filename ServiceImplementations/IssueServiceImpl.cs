@@ -40,6 +40,19 @@ public class IssueServiceImpl : IIssueService
         return result;
     }
 
+    public async Task<List<Issue>> GetIssuesByUsername(string username)
+    {
+        var result = await _issueContext.Issues.Select(i => i).Where(i => i.CreatedBy == username).ToListAsync();
+        if (result.Count == 0)
+        {
+            _logger.LogError("{}{}", "No issues found with username: ", username);
+            throw new NotFoundException($"No issues found with username: {username}");
+        }
+        
+        _logger.LogInformation("Got issues created by: {}", username);
+        return result;
+    }
+
     public async Task<Issue?> GetIssueById(int id)
     {
         var result = await _issueContext.Issues.Include(i => i.Reminder).FirstOrDefaultAsync(i => i.Id == id);
