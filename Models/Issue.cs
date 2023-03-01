@@ -3,6 +3,8 @@ namespace IssueTracker.Models;
 public record Issue
 {
     public int Id { get; set; }
+    
+    public string? CreatedBy { get; set; }
 
     public string? Title { get; set; }
 

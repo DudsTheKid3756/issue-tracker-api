@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace IssueTracker.Migrations.Auth
 {
     [DbContext(typeof(AuthContext))]
-    [Migration("20230131034726_InitialCreate")]
+    [Migration("20230301155359_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

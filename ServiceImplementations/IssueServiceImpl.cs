@@ -13,12 +13,14 @@ namespace IssueTracker.ServiceImplementations;
 public class IssueServiceImpl : IIssueService
 {
     private readonly AsyncCircuitBreakerPolicy _circuitBreaker;
-    private readonly IssueTrackerContext _context;
+    private readonly IssueTrackerContext _issueContext;
+    private readonly AuthContext _authContext;
     private readonly ILogger<IssueServiceImpl> _logger;
 
-    public IssueServiceImpl(IssueTrackerContext context, ILogger<IssueServiceImpl> logger)
+    public IssueServiceImpl(IssueTrackerContext issueContext, AuthContext authContext, ILogger<IssueServiceImpl> logger)
     {
-        _context = context;
+        _issueContext = issueContext;
+        _authContext = authContext;
         _logger = logger;
 
         _circuitBreaker = Policy
@@ -33,14 +35,14 @@ public class IssueServiceImpl : IIssueService
 
     public async Task<List<Issue>> GetIssues()
     {
-        var result = await _circuitBreaker.ExecuteAsync(() => _context.Issues.Include(i => i.Reminder).ToListAsync());
+        var result = await _circuitBreaker.ExecuteAsync(() => _issueContext.Issues.Include(i => i.Reminder).ToListAsync());
         _logger.LogInformation("Got all issues");
         return result;
     }
 
     public async Task<Issue?> GetIssueById(int id)
     {
-        var result = await _context.Issues.Include(i => i.Reminder).FirstOrDefaultAsync(i => i.Id == id);
+        var result = await _issueContext.Issues.Include(i => i.Reminder).FirstOrDefaultAsync(i => i.Id == id);
         if (result is null)
         {
             _logger.LogError("{}{}", "Issue", Constants.NotFound.Replace("{0}", id.ToString()));
@@ -53,6 +55,10 @@ public class IssueServiceImpl : IIssueService
 
     public async Task<Issue> AddIssue(Issue issue)
     {
+        var createdByUser = await _authContext.Users.FirstOrDefaultAsync(u => u.UserName == issue.CreatedBy);
+        if (createdByUser is null)
+            throw new NotFoundException($"User with username: '{issue.CreatedBy}' does not exist");
+
         var reminder = issue.Reminder;
         issue.Created = Constants.Placeholder;
         var errors = "";
@@ -93,8 +99,8 @@ public class IssueServiceImpl : IIssueService
 
         issue.Reminder = reminder;
         issue.Created = DateTime.Now.ToLocalTime().ToString("G");
-        var result = await _context.Issues.AddAsync(issue);
-        await _context.SaveChangesAsync();
+        var result = await _issueContext.Issues.AddAsync(issue);
+        await _issueContext.SaveChangesAsync();
         _logger.LogInformation("{}", message.Equals("") ? "New issue added" : message);
         return result.Entity;
     }
@@ -102,7 +108,7 @@ public class IssueServiceImpl : IIssueService
     public async Task<Issue?> UpdateIssue(Issue issue, int id)
     {
         var reminder = issue.Reminder;
-        var result = await _context.Issues.Include(i => i.Reminder).FirstOrDefaultAsync(i => i.Id == id);
+        var result = await _issueContext.Issues.Include(i => i.Reminder).FirstOrDefaultAsync(i => i.Id == id);
         if (result is null)
         {
             _logger.LogError("{}{}", "Issue", Constants.NotFound.Replace("{0}", id.ToString()));
@@ -150,22 +156,22 @@ public class IssueServiceImpl : IIssueService
 
         result.Reminder = result.HasReminder is true ? reminder : null;
 
-        await _context.SaveChangesAsync();
+        await _issueContext.SaveChangesAsync();
         _logger.LogInformation("Issue with id {} updated. {}", id, message);
         return result;
     }
 
     public async Task DeleteIssue(int id)
     {
-        var result = await _context.Issues.FindAsync(id);
+        var result = await _issueContext.Issues.FindAsync(id);
         if (result is null)
         {
             _logger.LogError("{}{}", "Issue", Constants.NotFound.Replace("{0}", id.ToString()));
             throw new NotFoundException(string.Format($"Issue{Constants.NotFound}", id));
         }
 
-        _context.Issues.Remove(result);
-        await _context.SaveChangesAsync();
+        _issueContext.Issues.Remove(result);
+        await _issueContext.SaveChangesAsync();
         _logger.LogInformation("Issue with id {} deleted", id);
     }
 }

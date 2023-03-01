@@ -39,6 +39,9 @@ namespace IssueTracker.Migrations
                     b.Property<string>("Created")
                         .HasColumnType("text");
 
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("text");
+
                     b.Property<bool?>("HasReminder")
                         .HasColumnType("boolean");
 
