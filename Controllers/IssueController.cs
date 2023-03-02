@@ -27,7 +27,7 @@ public class IssueController : ControllerBase
         return await _issueService.GetIssues();
     }
 
-    [HttpGet("{username}")]
+    [HttpGet("user/{username}")]
     public async Task<ActionResult<List<Issue>>> GetIssuesByUsername(string username)
     {
         _logger.LogInformation("Request received for GetIssuesByUsername: {}", username);
