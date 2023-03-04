@@ -42,13 +42,15 @@ public class IssueServiceImpl : IIssueService
 
     public async Task<List<Issue>> GetIssuesByUsername(string username)
     {
-        var result = await _issueContext.Issues.Select(i => i).Where(i => i.CreatedBy == username).ToListAsync();
-        if (result.Count == 0)
+        var user = await _authContext.Users.FirstOrDefaultAsync(i => i.UserName == username);
+        if (user is null)
         {
-            _logger.LogError("{}{}", "No issues found with username: ", username);
-            throw new NotFoundException($"No issues found with username: {username}");
+            _logger.LogError("User with username '{}' does not exist", username);
+            throw new NotFoundException($"User with username '{username}' does not exist");
         }
         
+        var result = await _issueContext.Issues.Select(i => i).Where(i => i.CreatedBy == username).ToListAsync();
+
         _logger.LogInformation("Got issues created by: {}", username);
         return result;
     }
