@@ -35,7 +35,7 @@ public class AuthController : ControllerBase
         var user = await _userManager.FindByNameAsync(username);
         if (user is null) throw new NotFoundException($"User '{username}' not found");
 
-        return Ok(user.Email);
+        return Ok(new {email = user.Email});
     }
 
     [HttpPost]
