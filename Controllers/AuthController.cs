@@ -6,6 +6,7 @@ using IssueTracker.Models;
 using IssueTracker.Utils;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 namespace IssueTracker.Controllers;
@@ -26,6 +27,15 @@ public class AuthController : ControllerBase
         _userManager = userManager;
         _roleManager = roleManager;
         _configuration = configuration;
+    }
+
+    [HttpGet("user/{username}")]
+    public async Task<IActionResult> FindEmail(string username)
+    {
+        var user = await _userManager.FindByNameAsync(username);
+        if (user is null) throw new NotFoundException($"User '{username}' not found");
+
+        return Ok(user.Email);
     }
 
     [HttpPost]
