@@ -49,7 +49,10 @@ public class IssueServiceImpl : IIssueService
             throw new NotFoundException($"User with username '{username}' does not exist");
         }
         
-        var result = await _issueContext.Issues.Select(i => i).Where(i => i.CreatedBy == username).ToListAsync();
+        var result = await _issueContext.Issues
+            .Include(i => i.Reminder)
+            .Select(i => i)
+            .Where(i => i.CreatedBy == username).ToListAsync();
 
         _logger.LogInformation("Got issues created by: {}", username);
         return result;
