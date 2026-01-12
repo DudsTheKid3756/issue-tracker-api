@@ -41,6 +41,8 @@ jobs:
 
       - name: Azure Login
         uses: Azure/login@v2.3.0
+        with:
+          subscription-id: ${{ secrets.AZURE_SUB_ID }}
 
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
